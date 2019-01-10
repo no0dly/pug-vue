@@ -1,18 +1,27 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  el-container
+    .wrapper
+      app-input
+      app-list
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Input from './../components/Input'
+import List from './../components/List'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    AppInput: Input,
+    AppList: List
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+</style>
